@@ -6,20 +6,68 @@ Exercícios sobre os comandos básicos em C
 */
 
 //1. Faça um programa que imprima o seu nome.
+void q01() {
+    printf("Gustavo Antonio de Faria Pires\n");
+}
 
 //2. Faça um programa que imprima o produto dos valores 30 e 27.
+void q02() {
+    printf("Resultado: %d\n", 30*27);
+} 
 
 //3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
+void q03() {
+    //int=inteiro    float=real    char=caractere   char[20]
+    int num1 = 5;
+    int num2 = 8;
+    int num3 = 12;
+    float media = (5+8+12)/3.0;
+    printf("Media de %d %d %d = %.2f\n", num1, num2, num3, media);
+}
 
 //4. Faça um programa que leia e imprima um número inteiro.
-
+void q04() {
+    int numero;
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
+    printf("Número digitado: %d", numero);
+}
 //5. Faça um programa que leia dois números reais e os imprima.
+void q05() {
+    float num1, num2;
+    printf("Digite o primeiro número real: ");
+    scanf("%f", &num1);
+    printf("Digite o segundo número real: ");
+    scanf("%f", &num2);
+    printf("Os números digitados foram: %f e %f", num1, num2);
+
+}
 
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
+void q06() {
+    int num;
+    printf("digite um número inteiro");
+    scanf("%d", &num);
+    int ant = num-1;
+    int suc = num+1;
+    printf("Seu antecessor é %d e seu sucessor é %d", ant, suc);
+
+}
 
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
+void q07() {
+    char nome[50], endereco[70], telefone[14];
+    printf("Nome: ");
+    scanf(" %50[^\n]",&nome);
+    printf("Endereço: ");
+    scanf(" %70[^\n]",&endereco);
+    printf("Telefone: ");
+    scanf(" %14[^\n]",&telefone);
+    printf("Nome: %s\nEndereço: %s\nTelefone: %s\n",nome,endereco,telefone);
+
+}
 
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
@@ -83,3 +131,9 @@ Exercícios sobre os comandos básicos em C
 //20. Faça um programa que efetue a apresentação do valor da conversão
 //    em real (R$) de um valor lido em dólar (US$). Para isso, será
 //    necessário também ler o valor da cotação do dólar.
+
+int main() {
+    q06();
+
+    return EXIT_SUCCESS;
+}
