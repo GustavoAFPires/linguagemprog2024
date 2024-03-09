@@ -178,21 +178,81 @@ void q13() {
 
 //14. Faça um programa que leia a base e a altura de um retângulo
 //    e imprima o perímetro (base + altura) e a área (base * altura).
+void q14() {
+
+    float b, h;
+
+    printf("Digite o valor da base do retangulo: ");
+    scanf("%f", &b);
+    printf("Digite o valor da altura do retangulo: ");
+    scanf("%f", &h);
+
+    float per = 2*(b+h);
+    float are = b*h;
+
+    printf("O perímetro do retangulo é %.2f e a área é %.2f.\n", per, are);
+
+}
 
 //15. Faça um programa que leia o valor de um produto, o percentual
 //    do desconto desejado e imprima o valor do desconto e o valor
 //    do produto subtraindo o desconto.
+void q15() {
+    
+    float vp, per;
+
+    printf("Digite o valor do produto: ");
+    scanf("%f", &vp);
+    printf("Digite o percentual de desconto: ");
+    scanf("%f", &per);
+
+    float pd = per/100;
+    float vd = vp*pd;
+    float vf = vp-vd;
+
+    printf("O valor do desconto é de %.2f reais e o valor do produto com desconto é de %.2f reais.\n", vd, vf);
+
+}
 
 //16. Faça um programa que calcule o reajuste do salário de um
 //    funcionário. Para isso, o programa deverá ler o salário atual
 //    do funcionário e ler o percentual de reajuste. Ao final imprimir
 //    o valor do novo salário.
+void q16() {
+
+    float salarioa, perreajuste;
+
+    printf("Digite o salário atual do funcionário: ");
+    scanf("%f", &salarioa);
+    printf("Digite o percentual de reajuste: ");
+    scanf("%f", &perreajuste);
+    
+    float perrea = perreajuste/100;
+    float vrea = salarioa*perrea;
+    float sfinal = vrea+salarioa;
+
+    printf("O novo salário com reajuste é de R$%.2f.\n\n", sfinal);
+
+
+}
 
 //17. Faça um programa que calcule a conversão entre graus centígrados
 //    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 //    com base na fórmula a seguir. Após calcular o programa deve
 //    imprimir o resultado da conversão.
 //    F = (9 x C +160) / 5
+void q17() {
+    
+    float c;
+
+    printf("Digite o valor da temperatua em graus centígrados: ");
+    scanf("%f", &c);
+
+    float f = (9*c+160)/5;
+
+    printf("O valor da temperatura em gaus Fahrenheit é: %.2f\n\n.", f);
+
+}
 
 //18. Faça um programa que calcule a quantidade de litros de combustível
 //    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -206,6 +266,20 @@ void q13() {
 //    • L = Litros de combustível consumidos
 //    Ao final, o programa deverá imprimir a distância percorrida e a
 //    quantidade de litros consumidos na viagem.
+void q18() {
+   float T, V;
+
+    printf("Digite o tempo decorrido da viagem em horas: ");
+    scanf("%f", &T);
+    printf("Digite a velocidade média: ");
+    scanf("%f", &V);
+
+    float D = T * V;
+    float L = D / 12;
+
+    printf("A distância percorrida foi de %.2f e a quantidade de litros de combustível consumido foi de %.2f.\n\n", D, L);
+
+}
 
 //19. Faça um programa que calcule o valor de uma prestação em atraso.
 //    Para isso, o programa deve ler o valor da prestação vencida, a
@@ -219,7 +293,7 @@ void q13() {
 //    necessário também ler o valor da cotação do dólar.
 
 int main() {
-    q13();
+    q18();
 
     return EXIT_SUCCESS;
 }
