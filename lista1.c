@@ -250,7 +250,7 @@ void q17() {
 
     float f = (9*c+160)/5;
 
-    printf("O valor da temperatura em gaus Fahrenheit é: %.2f\n\n.", f);
+    printf("O valor da temperatura em gaus Fahrenheit é: %.2f.\n\n", f);
 
 }
 
@@ -287,13 +287,48 @@ void q18() {
 //    programa deve imprimir o valor da prestação atrasada, o período
 //    de atraso, os juros que serão cobrados pelo período de atraso, o
 //    valor da prestação acrescido dos juros. Considere juros simples.
+void q19() {
+
+    float pres_vencida, taxa_juros, peri_atraso;
+
+    printf("Digite o valor da prestação venvida: ");
+    scanf("%f", &pres_vencida);
+    printf("Digite a taxa periódica de juros: ");
+    scanf("%f", &taxa_juros);
+    printf("Digite o período de atraso: ");
+    scanf("%f", &peri_atraso);
+
+    float juros = taxa_juros/100;
+    float juros_cobrados = pres_vencida * juros * peri_atraso;
+    float valor_pres = juros_cobrados + pres_vencida;
+
+    printf("\n");
+    printf("O valor da parcela é: %.2f.\n", pres_vencida);
+    printf("O período de atraso é: %.2f.\n", peri_atraso);
+    printf("Os juros cobrados pelo periodo é: %.2f.\n", juros_cobrados);
+    printf("O valor da prestação acrescido dos juros é: %.2f.\n\n", valor_pres);
+
+}
 
 //20. Faça um programa que efetue a apresentação do valor da conversão
 //    em real (R$) de um valor lido em dólar (US$). Para isso, será
 //    necessário também ler o valor da cotação do dólar.
+void q20() {
+
+    float valor_dolar, cotacao;
+
+    printf("Digite o valor em dólar (US$): ");
+    scanf("%f", &valor_dolar);
+    printf("Digite o valor da cotação do dólar em reais (R$): ");
+    scanf("%f", &cotacao);
+
+    float real = valor_dolar * cotacao;
+
+    printf("\nO valor de US$%.2f equivale a R$%.2f.\n\n", valor_dolar, real);
+}
 
 int main() {
-    q18();
+    q20();
 
     return EXIT_SUCCESS;
 }
