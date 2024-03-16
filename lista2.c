@@ -6,12 +6,15 @@ EXERCÍCIOS DO CAPÍTULO 2
 #include <stdlib.h>
 #include<math.h>
 
-//1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
+//1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição,
+//caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
 
 }
 
-//2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.
+//2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20,
+//este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá
+//ser apresentado subtraindo-se 5.
 void questao02() {
 
 }
@@ -78,7 +81,9 @@ void questao12() {
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2,
+//a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"
+//(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
 	
 }
@@ -95,7 +100,8 @@ void questao14() {
 }
 
 //15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
-//da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor do produto e imprima o valor da venda.
+//da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa
+//que leia o valor do produto e imprima o valor da venda.
 void questao15() {
 	
 }
@@ -112,7 +118,10 @@ void questao16() {
 	
 }
 
-//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
+//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas
+//começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de
+//um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome
+//e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
 //Idade Valor
 //Até 10 anos R$30,00
 //Acima de 10 até 29 anos R$60,00
@@ -124,20 +133,27 @@ void questao17() {
 	
 }
 
-//18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando que não existe mês com este número. Utilize o switch para este problema.
+//18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente.
+//Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando
+//que não existe mês com este número. Utilize o switch para este problema.
 void questao18() {
 	
 }
 
-//19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos, criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
+//19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado.
+//Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos, criar um programa
+//que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
 //• Ler os pontos obtidos por cada jogador da equipe;
 //• Mostrar esses valores em ordem decrescente;
-//• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles, caso contrário, imprimir a mensagem "Equipe desclassificada".
+//• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles, caso contrário,
+//imprimir a mensagem "Equipe desclassificada".
 void questao19() {
 	
 }
 
-//20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
+//20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o 
+//saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do
+//crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
 //Saldo Médio Percentual
 //de 0 a 500 nenhum crédito
 //de 501 a 1000 30% do valor do saldo médio
@@ -147,7 +163,9 @@ void questao20() {
 	
 }
 
-//21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será emprestado, o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir. Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
+//21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será
+//emprestado, o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir.
+//Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
 //• Nome do livro:
 //• Tipo de usuário:
 //• Total de dias:
@@ -155,12 +173,14 @@ void questao21() {
 	
 }
 
-//22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
+//22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado
+//de combustível, sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
 void questao22() {
 	
 }
 
-//23. Crie um programa que informe a quantidade total de calorias de uma refeição a partir da escolha do usuário que deverá informar o prato, a sobremesa, e bebida conforme a tabela a seguir.
+//23. Crie um programa que informe a quantidade total de calorias de uma refeição a partir da
+//escolha do usuário que deverá informar o prato, a sobremesa, e bebida conforme a tabela a seguir.
 //Prato Sobremesa Bebida
 //Vegetariano 180cal Abacaxi 75cal Chá 20cal
 //Peixe 230cal Sorvete diet 110cal Suco de laranja 70cal
@@ -170,12 +190,18 @@ void questao23() {
 
 }
 
-//24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dosmotoristas o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser renovado é determinado pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro, informe omês em que o emplacamento deve ser renovado.
+//24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dosmotoristas
+//o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser renovado é determinado
+//pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro,
+//informe omês em que o emplacamento deve ser renovado.
 void questao24() {
 	
 }
 
-//25. A prefeitura contratou uma firma especializada para manter os níveis de poluição considerados ideais para umpaís do 1º mundo. As indústrias, maiores responsáveis pela poluição, foram classificadas em três grupos. Sabendo-se que a escala utilizada varia de 0,05 e que o índice de poluição aceitável é até 0,25, fazer um programa que possa imprimir intimações de acordo com o índice e a tabela a seguir:
+//25. A prefeitura contratou uma firma especializada para manter os níveis de poluição considerados
+//ideais para umpaís do 1º mundo. As indústrias, maiores responsáveis pela poluição, foram classificadas
+//em três grupos. Sabendo-se que a escala utilizada varia de 0,05 e que o índice de poluição aceitável
+//é até 0,25, fazer um programa que possa imprimir intimações de acordo com o índice e a tabela a seguir:
 //Índice Indústrias que receberão intimação
 //0,3 1º gurpo
 //0,4 1º e 2º grupos
