@@ -10,12 +10,43 @@ EXERCÍCIOS DO CAPÍTULO 2
 //caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
 
+int num1, num2;
+
+printf("Digite o primeiro número inteiro: ");
+scanf("%d", &num1);
+printf("Digite o segundo número inteiro: ");
+scanf("%d", &num2);
+
+int soma = num1 + num2;
+
+if (soma > 10){
+	printf("O valor da soma é: %d.\n", soma);
+}
+
 }
 
 //2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20,
 //este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá
 //ser apresentado subtraindo-se 5.
 void questao02() {
+
+	int num1, num2, adi, res;
+
+	printf("Digite o primeiro número inteiro: ");
+	scanf("%d", &num1);
+	printf("Digite o segundo número inteiro: ");
+	scanf("%d", &num2);
+
+	adi = num1 + num2;
+
+	if(adi > 20) {
+		res = adi + 8;
+		printf("O número %d somado com 8 é: %d.\n", adi, res);
+	}
+	else {
+		res = adi - 5;
+		printf("O número %d subtraido com 5 é %d.\n", adi, res);
+	}
 
 }
 
