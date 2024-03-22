@@ -52,17 +52,59 @@ void questao02() {
 
 //3. Faça um programa que leia um número e imprima uma das duas mensagens: "É múltiplo de 3"ou "Não é múltiplo de 3".
 void questao03() {
-	
-}
 
+	int n, resto;
+
+	printf("Digite um número: ");
+	scanf("%d", &n);
+
+	resto = n % 3;
+	
+	if(resto == 0) {
+		printf("É múltiplo de 3.\n");
+	}
+	else {
+		printf("Não é múltiplo de 3.\n");
+	}
+
+}
 //4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 void questao04() {
+
+	int n, resto;
+
+	printf("Digite um número: ");
+	scanf("%d", &n);
+
+	resto = n % 5;
+
+	if (resto == 0) {
+		printf("O número %d é divisível por 5.\n", n);
+	}
+	else {
+		printf("O número %d não é divisível por 5.\n", n);
+	}
 	
 }
 
 //5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 void questao05() {
 
+	int num, resto3, resto7;
+
+	printf("Dgite um número: ");
+	scanf("%d", &num);
+
+	resto3 = num % 3;
+	resto7 = num % 7;
+
+	if (resto3 == 0 && resto7 == 0) {
+		printf("O número %d é divisível por 3 e por 7.\n", num);
+	}
+	else {
+		printf("O número %d não é divisível por 3 e por 7.\n", num);
+	}
+	
 }
 
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -70,6 +112,22 @@ void questao05() {
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
+
+	float salario, prestacao, taxa;
+
+	printf("Digite o valor do salário bruto: ");
+	scanf("%f", &salario);
+	printf("Digite o valor da prestação: ");
+	scanf("%f", &prestacao);
+
+	taxa = salario * 0.3;
+
+	if(prestacao > taxa) {
+		printf("O empréstimo não pode ser concedido.\n");
+	}
+	else {
+		printf("O empréstimo pode ser concedido.\n");
+	}
 
 }
 
@@ -254,9 +312,18 @@ int main() {
 		case 2:
 			questao02();
 			break;
+		case 3:
+			questao03();
+			break;
+		case 4:
+			questao04();
+			break;
 		case 5:
 			questao05();
-			break;			
+			break;
+		case 6:
+			questao06();
+				break;
 		case 10:
 			questao10();
 			break;
