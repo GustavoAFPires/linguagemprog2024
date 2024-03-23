@@ -135,18 +135,60 @@ void questao06() {
 //entre 20 e 50 ou não.
 void questao07() {
 
-}
+	float num;
 
+	printf("Digite um número: ");
+	scanf("%f", &num);
+
+	if(num >= 20 && num <= 50){
+		printf("O número %.2f está compreendido entre 20 e 50.\n", num);
+	}
+	else {
+		printf("O número %.2f não está compreendido entre 20 e 50.\n", num);
+	}
+}
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
-	
+
+	float num;
+
+	printf("Digite um número: ");
+	scanf("%f", &num);
+
+	if(num > 20){
+		printf("\nMaior do que 20.\n");
+	}
+	else if(num == 20) {
+		printf("\nIgual a 20.\n");
+	}
+	else {
+		printf("\nMenor do que 20.\n");
+	}
 }
 
 //9. Faça um programa que permita entrar com o ano de nascimento da pessoa e como ano
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
+	//Declaração de variaveis
+	int nas, atual, idade;
+	//leitura dos dados
+	printf("Digite o ano de nascimento da pessoa: ");
+	scanf("%d", &nas);
+	printf("Digite o ano atual: ");
+	scanf("%d", &atual);
+	//cálculos
+	if (atual < nas){
+		printf("Ano de nascimento inválido.\n");
+	}
+	else {
+		idade = atual - nas;
+		printf("A idade da pessoa é de %d anos.\n", idade);
+	}
+
+
+
 	
 }
 
@@ -154,6 +196,25 @@ void questao09() {
 //crescente.
 void questao10() {
 
+	int num1, num2, num3;
+
+	printf("Digite o primeiro número inteiro: ");
+	scanf("%d", &num1);
+	printf("Digite o segundo número inteiro: ");
+	scanf("%d", &num2);
+	printf("Digite o terceiro número inteiro: ");
+	scanf("%d", &num3);
+
+	if(num1 < num2 && num2 < num3) {
+		printf("%d; %d; %d.\n", num1, num2, num3);
+	}
+	else if(num2 < num3 && num3 < num1) {
+		printf("%d; %d; %d.\n", num2, num3, num1);
+	}
+	else if(num3 < num1 && num1 < num2) {
+		printf("%d; %d; %d.\n", num3, num1, num2);
+	}
+//incompleto
 }
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
@@ -303,8 +364,10 @@ int main() {
 	const char menu[1000] = "\n================================\n            PROGRAMAS\n================================\n[1]  - Adição\n[2]  - Adição 2\n[3]  - Múltiplo\n[4]  - Múltiplo 2\n[5]  - Múltiplo 3\n[6]  - Crédito\n[7]  - Intervalo\n[8]  - Menor/Maior\n[9]  - Idade\n[10] - Crescente\n[11] - Maior\n[12] - Idade 2\n[13] - Situação Aluno\n[14] - INSS\n[15] - Valor de Venda\n[16] - Natação\n[17] - Plano de Saúde\n[18] - Mês do Ano\n[19] - Arco e Flecha\n[20] - Crédito Especial\n[21] - Biblioteca\n[22] - Consumo Combustível\n[23] - Calorias\n[24] - Emplacamento\n[25] - Intimação\n================================\n";
 	printf("%s",menu);
 	int opcao;
+
 	printf("Digite a questão a ser executada: ");
 	scanf("%d", &opcao);
+
 	switch (opcao) {
 		case 1:
 			questao01();
@@ -324,9 +387,63 @@ int main() {
 		case 6:
 			questao06();
 				break;
+		case 7:
+			questao07();
+				break;
+		case 8:
+			questao08();
+				break;
+		case 9:
+			questao09();
+				break;
 		case 10:
 			questao10();
 			break;
+		case 11:
+			questao11();
+				break;
+		case 12:
+			questao12();
+				break;
+		case 13:
+			questao13();
+				break;
+		case 14:
+			questao14();
+				break;
+		case 15:
+			questao15();
+				break;
+		case 16:
+			questao16();
+				break;
+		case 17:
+			questao17();
+				break;
+		case 18:
+			questao18();
+				break;
+		case 19:
+			questao19();
+				break;
+		case 20:
+			questao20();
+				break;
+		case 21:
+			questao21();
+				break;
+		case 22:
+			questao22();
+				break;
+		case 23:
+			questao23();
+				break;
+		case 24:
+			questao24();
+				break;
+		case 25:
+			questao25();
+				break;
 		default:
 			printf("Opção inválida!");
 	}
