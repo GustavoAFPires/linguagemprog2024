@@ -196,29 +196,65 @@ void questao09() {
 //crescente.
 void questao10() {
 
-	int num1, num2, num3;
+	int a, b, c;
 
 	printf("Digite o primeiro número inteiro: ");
-	scanf("%d", &num1);
+	scanf("%d", &a);
 	printf("Digite o segundo número inteiro: ");
-	scanf("%d", &num2);
+	scanf("%d", &b);
 	printf("Digite o terceiro número inteiro: ");
-	scanf("%d", &num3);
+	scanf("%d", &c);
 
-	if(num1 < num2 && num2 < num3) {
-		printf("%d; %d; %d.\n", num1, num2, num3);
+	if(a < b && b < c) {
+		printf("%d; %d; %d.\n", a, b, c);
 	}
-	else if(num2 < num3 && num3 < num1) {
-		printf("%d; %d; %d.\n", num2, num3, num1);
+	else if(a < c && c < b) {
+		printf("%d; %d; %d.\n", a, c, b);
 	}
-	else if(num3 < num1 && num1 < num2) {
-		printf("%d; %d; %d.\n", num3, num1, num2);
+	else if(b < a && a < c) {
+		printf("%d; %d; %d.\n", b, a, c);
 	}
-//incompleto
+	else if(b < c && c < a) {
+		printf("%d; %d; %d.\n", b, c, a);
+	}
+	else if(c < a && a < b) {
+		printf("%d; %d; %d.\n", c, a, b);
+	}
+	else {
+		printf("%d; %d; %d.\n", c, b, a);
+	}
 }
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
+
+	float a, b, c;
+
+	printf("Digite o primeiro número: ");
+	scanf("%f", &a);
+	printf("Digite o segundo número: ");
+	scanf("%f", &b);
+	printf("Digite o terceiro número: ");
+	scanf("%f", &c);
+
+	if(a < b && b < c) {
+		printf("%.2f.\n", c);
+	}
+	else if(a < c && c < b) {
+		printf("%.2f.\n", b);
+	}
+	else if(b < a && a < c) {
+		printf("%.2f.\n", c);
+	}
+	else if(b < c && c < a) {
+		printf("%.2f.\n", a);
+	}
+	else if(c < a && a < b) {
+		printf("%.2f.\n", b);
+	}
+	else {
+		printf("%.2f.\n", a);
+	}
 	
 }
 
@@ -228,14 +264,44 @@ void questao11() {
 //• Se é maior de 65 anos
 void questao12() {
 	
+	int idade;
+
+	printf("Digite a idade da pessoa: ");
+	scanf("%d", &idade);
+
+	if(idade < 18) {
+		printf("É menor de idade.\n");
+	}
+	else if(idade >= 18 && idade < 65) {
+		printf("É maior de idade.\n");
+	}
+	else {
+		printf("É maior de 65 anos.\n");
+	}
+	
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2,
+//prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2,
 //a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"
 //(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
 	
+	char nome[300];
+	float n1, n2, media;
+
+	printf("Digite o nome do aluno: ");
+	scanf("\n%[^\n]s", &nome);
+	printf("Digite a nota da prova 1: ");
+	scanf("%f", n1);
+	printf("Digite a nota da prova 2; ");
+	scanf("%f", n2);
+
+	media = (n1+n2)/2;
+	
+	printf("%s\n", nome);
+
+
 }
 
 //14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
