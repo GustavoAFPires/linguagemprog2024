@@ -287,20 +287,33 @@ void questao12() {
 //(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
 	
-	char nome[300];
+	char nome[100];
 	float n1, n2, media;
 
 	printf("Digite o nome do aluno: ");
 	scanf("\n%[^\n]s", &nome);
+	//fgets  (nome, 100, stdin);
 	printf("Digite a nota da prova 1: ");
-	scanf("%f", n1);
+	scanf("%f", &n1);
 	printf("Digite a nota da prova 2; ");
-	scanf("%f", n2);
+	scanf("%f", &n2);
 
 	media = (n1+n2)/2;
-	
+	*/
 	printf("%s\n", nome);
+	/*printf("Prova 1: -%f\n", n1);
+	printf("Prova 2: -%f\n", n2);
+	printf("Média: -%f\n", media);
 
+	if(media >= 7) {
+		printf("Aluno aprovado.\n");
+	}	else if(media < 3) {
+		printf("Aluno reprovado.\n");
+	}
+	else {
+		printf("Aluno em prova final.\n");
+	}
+*/
 
 }
 
