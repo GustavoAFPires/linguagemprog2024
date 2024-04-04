@@ -286,24 +286,23 @@ void questao12() {
 //a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"
 //(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
-	
+
 	char nome[100];
 	float n1, n2, media;
 
 	printf("Digite o nome do aluno: ");
-	scanf("\n%[^\n]s", &nome);
-	//fgets  (nome, 100, stdin);
+	scanf(" %100[^\n]", &nome); //Colocar espaço antes da porcentagem
 	printf("Digite a nota da prova 1: ");
 	scanf("%f", &n1);
-	printf("Digite a nota da prova 2; ");
+	printf("Digite a nota da prova 2: ");
 	scanf("%f", &n2);
 
 	media = (n1+n2)/2;
-	*/
-	printf("%s\n", nome);
-	/*printf("Prova 1: -%f\n", n1);
-	printf("Prova 2: -%f\n", n2);
-	printf("Média: -%f\n", media);
+	
+	printf("\nnome   : %s\n", nome);
+	printf("Prova 1: %.2f\n", n1);
+	printf("Prova 2: %.2f\n", n2);
+	printf("Média  : %.2f\n", media);
 
 	if(media >= 7) {
 		printf("Aluno aprovado.\n");
@@ -313,7 +312,7 @@ void questao13() {
 	else {
 		printf("Aluno em prova final.\n");
 	}
-*/
+
 
 }
 
@@ -326,17 +325,52 @@ void questao13() {
 //Maior que R$2000,00 30%
 void questao14() {
 	
+	float salario, desconto;
+
+	printf("Digite o salário: ");
+	scanf(" %f", &salario);
+
+	if(salario <= 600) {
+		printf("Desconto do INSS: Isento.\n");
+	}
+	else if(salario > 600 && salario <= 1200) {
+		desconto = salario * 0.2;
+		printf("Desconto do INSS: R$%.2f.\n", desconto);
+	}
+	else if(salario > 1200 && salario <= 2000) {
+		desconto = salario * 0.25;
+		printf("Desconto do INSS: R$%.2f.\n", desconto);
+	}
+	else {
+		desconto = salario * 0.30;
+		printf("Desconto do INSS: R$%.2f.\n", desconto);
+	}
 }
 
-//15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
+//15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor
 //da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa
 //que leia o valor do produto e imprima o valor da venda.
 void questao15() {
+
+	float valor, venda;
+
+	printf("Digite o valor do produto: ");
+	scanf(" %f", &valor);
+
+	if(valor < 20) {
+		venda = (valor * 0.45) + valor;
+		printf("O valor da venda é: R$%.2f.\n", venda);
+	}
+	else {
+		venda = (valor * 0.30) + valor;
+		printf("O valor da venda é: R$%.2f\n", venda);
+	}
 	
 }
 
 //16. A confederação brasileira de natação irá promover eliminatórias para o próximo
-//mundial. Faça um programa que receba a idade de um nadador e imprima a sua categoria segundo a tabela a seguir:
+//mundial. Faça um programa que receba a idade de um nadador e
+//imprima a sua categoria segundo a tabela a seguir:
 //Categoria Idade
 //Infantil A 5 - 7 anos
 //Infantil B 8 - 10 anos
@@ -345,21 +379,75 @@ void questao15() {
 //Sênior maiores de 18 anos
 void questao16() {
 	
+	int idade;
+
+	printf("Digite a idade do nadador: ");
+	scanf("%d", &idade);
+
+	if(idade >= 5 && idade <= 7) {
+		printf("Categoria: Infantil A.\n");
+	}
+	else if(idade >= 8 && idade <= 10) {
+		printf("Categoria: Infantil B.\n");
+	}
+	else if(idade >= 11 && idade <= 13) {
+		printf("Categoria: Juvenil A.\n");
+	}
+	else if(idade >= 14 && idade <= 17) {
+		printf("Categoria: Juvenil B.\n");
+	}
+	else if(idade < 5) {
+		printf("Sem categoria para a idade.\n");
+	}
+	else {
+		printf("Categoria: Sênior.\n");
+	}
+	
 }
 
 //17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas
-//começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de
+//começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Um vendedor de
 //um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome
 //e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
-//Idade Valor
-//Até 10 anos R$30,00
+//     Idade               Valor
+//Até 10 anos             R$30,00
 //Acima de 10 até 29 anos R$60,00
 //Acima de 29 até 45 anos R$120,00
 //Acima de 45 até 59 anos R$150,00
 //Acima de 59 até 65 anos R$250,00
-//Maior que 65 anos R$400,00
+//Maior que 65 anos       R$400,00
 void questao17() {
 	
+	char nome[70];
+	int idade;
+
+	printf("Digite o nome da pessoa: ");
+	scanf(" %70[^\n]", &nome);
+	printf("Digite a idade da pessoa: ");
+	scanf(" %d", &idade);
+
+
+	printf("Nome: %s.\n", nome);
+	
+	if(idade <= 10) {
+		printf("Valor do plano: R$30,00\n");
+	}
+	else if(idade > 10 && idade <=29) {
+		printf("Valor do plano: R$60,00\n");
+	}
+	else if(idade > 29 && idade <=45) {
+		printf("Valor do plano: R$120,00\n");
+	}
+	else if(idade > 45 && idade <=59) {
+		printf("Valor do plano: R$150,00\n");
+	}
+	else if(idade > 59 && idade <=65) {
+		printf("Valor do plano: R$250,00\n");
+	}
+	else {
+		printf("Valor do plano: R$400,00\n");
+	}
+
 }
 
 //18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente.
