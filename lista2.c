@@ -451,10 +451,56 @@ void questao17() {
 }
 
 //18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente.
-//Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando
+//Caso o usuário digite um número fora desse intervalo, deverá aparecer uma mensagem informando
 //que não existe mês com este número. Utilize o switch para este problema.
 void questao18() {
-	
+
+	int n;
+
+	printf("Digite o numero do mês: ");
+	scanf("%d", &n);
+
+	switch (n) {
+	case 1:
+		printf("1 corresponde ao mês de Janeiro\n");
+		break;
+	case 2:
+		printf("2 corresponde ao mês de Fevereiro\n");
+		break;
+	case 3:
+		printf("3 corresponde ao mês de Março\n");
+		break;
+	case 4:
+		printf("4 corresponde ao mês de Abril\n");
+		break;
+	case 5:
+		printf("5 corresponde ao mês de Maio\n");
+		break;
+	case 6:
+		printf("6 corresponde ao mês de Junho\n");
+		break;
+	case 7:
+		printf("7 corresponde ao mês de Julho\n");
+		break;
+	case 8:
+		printf("8 corresponde ao mês de Agosto\n");
+		break;
+	case 9:
+		printf("9 corresponde ao mês de setembro\n");
+		break;
+	case 10:
+		printf("10 corresponde ao mês de Outubro\n");
+		break;
+	case 11:
+		printf("11 corresponde ao mês de Novembro\n");
+		break;
+	case 12:
+		printf("12 corresponde ao mês de Desembro\n");
+		break;
+	default:
+		printf("Não tem mês correspondente para o número %d.\n", n);
+	}
+
 }
 
 //19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado.
@@ -465,12 +511,53 @@ void questao18() {
 //• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles, caso contrário,
 //imprimir a mensagem "Equipe desclassificada".
 void questao19() {
+
+	float j1, j2, j3, soma, media;
+
+	printf("Digite o número de pontos do jogador 1: ");
+	scanf("%f", &j1);
+	printf("Digite o número de pontos do jogador 2: ");
+	scanf("%f", &j2);
+	printf("Digite o número de pontos do jogador 3: ");
+	scanf("%f", &j3);
+
+
+	if(j1 < j2 && j2 < j3) {
+		printf("%.2f; %.2f; %.2f.\n", j1, j2, j3);
+	}
+	else if(j1 < j3 && j3 < j2) {
+		printf("%.2f; %.2f; %.2f.\n", j1, j3, j2);
+	}
+	else if(j2 < j1 && j1 < j3) {
+		printf("%.2f; %.2f; %.2f.\n", j2, j1, j3);
+	}
+	else if(j2 < j3 && j3 < j1) {
+		printf("%.2f; %.2f; %.2f.\n", j2, j3, j1);
+	}
+	else if(j3 < j1 && j1 < j2) {
+		printf("%.2f; %.2f; %.2f.\n", j3, j1, j2);
+	}
+	else {
+		printf("%.2f; %.2f; %.2f.\n", j3, j2, j1);
+	}
+
+	soma = j1 + j2 + j3;
+	media = soma / 3;
+
+	if(media> 100) {
+		printf("A média dos pontos é: %.2f\n.", media);
+	}
+	else {
+		printf("Equipe desclassificada.\n");
+	}
 	
+
 }
 
 //20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o 
 //saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do
-//crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
+//crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o
+//saldo médio e o valor de crédito.
 //Saldo Médio Percentual
 //de 0 a 500 nenhum crédito
 //de 501 a 1000 30% do valor do saldo médio
