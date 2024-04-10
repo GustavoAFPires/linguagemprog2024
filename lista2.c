@@ -555,7 +555,7 @@ void questao19() {
 }
 
 //20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o 
-//saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do
+//saldo médio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do
 //crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o
 //saldo médio e o valor de crédito.
 //Saldo Médio Percentual
@@ -565,6 +565,25 @@ void questao19() {
 //acima de 3001 50% do valor do saldo médio
 void questao20() {
 	
+	float saldo_medio, valor_credito;
+
+	printf("Digite o saldo médio do cliente: ");
+	scanf("%f", &saldo_medio);
+
+	if(saldo_medio<=500) {
+		printf("Nenhum crédito concedido.\n");
+	}
+	else if(saldo_medio>=501 && saldo_medio<=1000) {
+		valor_credito = saldo_medio*0.3;
+	}
+	else if(saldo_medio>=1001 && saldo_medio<=3000) {
+		valor_credito = saldo_medio*0.4;
+	}
+	else if(saldo_medio>=3001) {
+		valor_credito = saldo_medio*0.5;
+	}
+
+	printf("O saldo médio é %.2f e o valor do crédito é %.2f.\n", saldo_medio, valor_credito);
 }
 
 //21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será
@@ -575,10 +594,11 @@ void questao20() {
 //• Total de dias:
 void questao21() {
 	
+	
 }
 
 //22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado
-//de combustível, sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
+//de combustível, sabendo-se que um carro tipo C faz 12 km com um litro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
 void questao22() {
 	
 }
