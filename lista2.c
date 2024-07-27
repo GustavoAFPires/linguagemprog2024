@@ -648,7 +648,7 @@ void questao22() {
 		printf("Consumo estimado de combustivel: %.2f litros.\n", consumo);
 	}
 	else {
-		printf("Tipo de carero invalido.\n");
+		printf("Tipo de carro invalido.\n");
 	}
 }
 
@@ -660,6 +660,61 @@ void questao22() {
 //Frango 250cal        Mousse diet 170cal        Suco de melão 100cal
 //Carne 350cal         Mousse chocolate 200cal   Refrigerante diet 65cal
 void questao23() {
+
+	int prato, sobremesa, bebida, calprato, calsobremesa, calbebida;
+
+	printf("Informe o número do prado de acordo com a tabela a tabela: \n");
+	printf("1-Vegetariano\t 2-peixe\n");
+	printf("3-frango\t 4-carne\n");
+	scanf("%d", &prato);
+
+
+
+	printf("Informe o número da sobremesa de acordo com a tabela a tabela: \n");
+	printf("1-Abacaxi\t 2-Sorvete\n");
+	printf("3-mousse diet\t 4-mousse chocolate\n");
+	scanf("%d", &sobremesa);
+switch (sobremesa) {
+		case 1:
+			calprato = 180;
+			break;
+		case 2:
+			calprato = 230;
+			break;
+		case 3:
+			calprato = 250;
+			break;
+		case 4:
+			calprato = 350;
+			break;
+		default:
+			printf("Prato invalido!\n");
+	printf("Informe o número da bebida de acordo com a tabela a tabela: \n");
+	printf("1-Chá\t 2-Suco de laranja\n");
+	printf("3-Suco de limao\t 4-Refrigerante diete\n");
+	scanf("%d", &bebida);
+
+	switch (prato) {
+		case 1:
+			calprato = 180;
+			break;
+		case 2:
+			calprato = 230;
+			break;
+		case 3:
+			calprato = 250;
+			break;
+		case 4:
+			calprato = 350;
+			break;
+		default:
+			printf("Prato invalido!\n");
+	}
+
+
+
+	}
+
 
 }
 
