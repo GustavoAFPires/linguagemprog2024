@@ -660,60 +660,48 @@ void questao22() {
 //Frango 250cal        Mousse diet 170cal        Suco de melão 100cal
 //Carne 350cal         Mousse chocolate 200cal   Refrigerante diet 65cal
 void questao23() {
+	//leitura das variaveis dos pratos:
+	int prato, sobremesa, bebida;
+	//leitura das variaveis das calorias:
+	int calprato, calsobremesa, calbebida;
 
-	int prato, sobremesa, bebida, calprato, calsobremesa, calbebida;
-
-	printf("Informe o número do prado de acordo com a tabela a tabela: \n");
+	//leitura do prato
+	printf("\nInforme o número do prado de acordo com a tabela a tabela: \n");
 	printf("1-Vegetariano\t 2-peixe\n");
 	printf("3-frango\t 4-carne\n");
 	scanf("%d", &prato);
 
-
-
+	//deitura da sobre mesa
 	printf("Informe o número da sobremesa de acordo com a tabela a tabela: \n");
 	printf("1-Abacaxi\t 2-Sorvete\n");
 	printf("3-mousse diet\t 4-mousse chocolate\n");
 	scanf("%d", &sobremesa);
-switch (sobremesa) {
-		case 1:
-			calprato = 180;
-			break;
-		case 2:
-			calprato = 230;
-			break;
-		case 3:
-			calprato = 250;
-			break;
-		case 4:
-			calprato = 350;
-			break;
-		default:
-			printf("Prato invalido!\n");
+	
+	//leitura da bebida
 	printf("Informe o número da bebida de acordo com a tabela a tabela: \n");
 	printf("1-Chá\t 2-Suco de laranja\n");
 	printf("3-Suco de limao\t 4-Refrigerante diete\n");
 	scanf("%d", &bebida);
 
-	switch (prato) {
-		case 1:
-			calprato = 180;
-			break;
-		case 2:
-			calprato = 230;
-			break;
-		case 3:
-			calprato = 250;
-			break;
-		case 4:
-			calprato = 350;
-			break;
-		default:
-			printf("Prato invalido!\n");
+	//cálculo das calorias do prato
+	if(prato == 1) {
+		calprato = 180;
+	}
+	else if (prato == 2) {
+		calprato = 230;
+	}
+	else if (prato == 3) {
+		calprato = 250;
+	}
+	else if (prato == 4){
+		calprato = 350;
+	}
+	else {
+		printf("Prato indisponível.\n");
 	}
 
-
-
-	}
+	//cálculo da sobre mesa
+	
 
 
 }
