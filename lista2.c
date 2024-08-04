@@ -663,7 +663,7 @@ void questao23() {
 	//leitura das variaveis dos pratos:
 	int prato, sobremesa, bebida;
 	//leitura das variaveis das calorias:
-	int calprato, calsobremesa, calbebida;
+	int calprato, calsobremesa, calbebida, caltotal;
 
 	//leitura do prato
 	printf("\nInforme o número do prado de acordo com a tabela a tabela: \n");
@@ -683,7 +683,7 @@ void questao23() {
 	printf("3-Suco de limao\t 4-Refrigerante diete\n");
 	scanf("%d", &bebida);
 
-	//cálculo das calorias do prato
+	//Cálculo das calorias do prato
 	if(prato == 1) {
 		calprato = 180;
 	}
@@ -700,22 +700,74 @@ void questao23() {
 		printf("Prato indisponível.\n");
 	}
 
-	//cálculo da sobre mesa
+	//Cálculo da sobre mesa
+	if(sobremesa == 1) {
+		calsobremesa = 75;
+	}
+	else if (sobremesa == 2) {
+		calsobremesa = 110;
+	}
+	else if (sobremesa == 3) {
+		calsobremesa = 170;
+	}
+	else if (sobremesa == 4){
+		calsobremesa = 200;
+	}
+	else {
+		printf("sobremesa indisponível.\n");
+	}
+
+	//Cálculo da bebida
+	if(bebida == 1) {
+		calbebida = 20;
+	}
+	else if (bebida == 2) {
+		calbebida = 70;
+	}
+	else if (bebida == 3) {
+		calbebida = 100;
+	}
+	else if (bebida == 4){
+		calbebida = 65;
+	}
+	else {
+		printf("bebida indisponível.\n");
+	}
+
+	//Cálculo das calorias totais
+	caltotal = calprato + calsobremesa + calbebida;
 	
-
-
+	printf("A caloria total é %d.\n", caltotal);
 }
 
-//24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dosmotoristas
+//24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dos motoristas
 //o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser renovado é determinado
 //pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro,
-//informe omês em que o emplacamento deve ser renovado.
+//informe o mês em que o emplacamento deve ser renovado.
 void questao24() {
+
+	int n_placa;
+
+	printf("Digite o ultitimo número da placa: \n");
+	scanf("%d", &n_placa);
+
+	if (n_placa >=1 && n_placa <= 3) {
+		printf("O emplacamento deve ser renovado no mês de janeiro\n");
+	}
+	else if (n_placa >=4 && n_placa <= 6) {
+		printf("O emplacamento deve ser renovado no mês de fevereiro\n");
+	}
+	else if (n_placa >=7 && n_placa <= 9 || n_placa == 0) {
+		printf("O emplacamento deve ser renovado no mês de março\n");
+	}
+	else {
+		printf("Placa invalida\n");
+	}
 	
 }
 
 //25. A prefeitura contratou uma firma especializada para manter os níveis de poluição considerados
-//ideais para umpaís do 1º mundo. As indústrias, maiores responsáveis pela poluição, foram classificadas
+//ideais para um país do 1º mundo. As indústrias, maiores responsáveis pela poluição, foram classificadas
 //em três grupos. Sabendo-se que a escala utilizada varia de 0,05 e que o índice de poluição aceitável
 //é até 0,25, fazer um programa que possa imprimir intimações de acordo com o índice e a tabela a seguir:
 //Índice Indústrias que receberão intimação
