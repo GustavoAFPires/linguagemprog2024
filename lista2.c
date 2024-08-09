@@ -748,7 +748,7 @@ void questao24() {
 
 	int n_placa;
 
-	printf("Digite o ultitimo número da placa: \n");
+	printf("Digite o ultimo número da placa: \n");
 	scanf("%d", &n_placa);
 
 	if (n_placa >=1 && n_placa <= 3) {
@@ -770,12 +770,31 @@ void questao24() {
 //ideais para um país do 1º mundo. As indústrias, maiores responsáveis pela poluição, foram classificadas
 //em três grupos. Sabendo-se que a escala utilizada varia de 0,05 e que o índice de poluição aceitável
 //é até 0,25, fazer um programa que possa imprimir intimações de acordo com o índice e a tabela a seguir:
+
 //Índice Indústrias que receberão intimação
 //0,3 1º gurpo
 //0,4 1º e 2º grupos
 //0,5 1º, 2º e 3º grupos
+
 void questao25() {
-	
+
+	float indice;
+
+	printf("\nInforme o valor do índice de poluição de sua empresa: \n");
+	scanf("%f", &indice);
+
+	if (indice <= 0.25) {
+		printf("\nA empresa está com os níveis de poluição aceitaveis\n.");
+	}
+	else if (indice > 0.25 && indice <=0.3) {
+		printf("\nA empresa receberá intimação do 1º grupo.\n");
+	}
+	else if (indice > 0.3 && indice <=0.4) {
+		printf("\nA empresa receberá intimação do 2º grupo.\n");
+	}
+	else  {
+		printf("\nA empresa receberá intimação do 3º grupo.\n");
+	}
 }
 
 int main() {
