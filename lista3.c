@@ -36,10 +36,17 @@ void exemploRepita() {
 //1.Faça um programa que imprima todos #1 os números de 1 até 100.
 void questao01() {
 
+	int i;
+
+	for (i=1; i<=100; i++) {
+		printf("%i \n", i);
+	}
+
 }
 
 //2. Faça um programa que imprima todos os números pares de 100 até 1.
 void questao02() {
+
 	for (int c = 100; c > 0; c-=2) {
 		printf("%d\n", c);
 	}
@@ -48,18 +55,40 @@ void questao02() {
 
 //3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 void questao03() {
+	int i;
+
+	for (i=5; i<=500; i+=5) {
+		printf("%d ", i);
+	}
+	printf("\n");
 
 }
-//4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
+//4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 //pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 //e tiver mais de 21 anos.
 void questao04() {
+
+	char nome[50], sexo;
+	int idade, i;
+
+	for (i = 1; i <= 2; i++) {
+		printf("Informe o nome da pessoa %d: ", i);
+		scanf(" %50[^\n]", &nome);
+		printf("Informe a idade da pesso %d: ", i);
+		scanf(" %d", &idade);
+		printf("Informe o sexo da pessoa %d, m para masculino ou f para feminino: ", i);
+		scanf(" %c", &sexo);
+
+
+
+	}
 	
 }
 //5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 //sucessivas, crie um programa que calcule o produto de dois números inteiros
 //lidos. Suponha que os números lidos sejam positivos.
 void questao05() {
+	printf("O email do professor é: preti.joao@ifmt.edu.br");
 	
 }
 //6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
@@ -353,7 +382,7 @@ void questao30() {
 
 
 int main() {
-	const char menu[1000] = "\n================================\n            PROGRAMAS\n================================\n[1]  - \n[2]  - \n[3]  - \n[4]  -\n[5]  - \n[6]  - \n[7]  - \n[8]  - \n[9]  - \n[10] - \n[11] - \n[12] - \n[13] - \n[14] - \n[15] - \n[16] - \n[17] - \n[18] - \n[19] - \n[20] - \n[21] - \n[22] - \n[23] - \n[24] - \n[25] - \n[26] - \n[27] - \n[28] - \n[29] - \n[30] - \n================================\n";
+	const char menu[1000] = "\n================================\n            PROGRAMAS\n================================\n[1]  - 0 a 100\n[2]  - 100 a 0\n[3]  - Múltiplos de 5\n[4]  - Nome idade e sexo\n[5]  - \n[6]  - \n[7]  - \n[8]  - \n[9]  - \n[10] - \n[11] - \n[12] - \n[13] - \n[14] - \n[15] - \n[16] - \n[17] - \n[18] - \n[19] - \n[20] - \n[21] - \n[22] - \n[23] - \n[24] - \n[25] - \n[26] - \n[27] - \n[28] - \n[29] - \n[30] - \n================================\n";
 	printf("%s",menu);
 	int opcao;
 
