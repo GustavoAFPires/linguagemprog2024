@@ -68,19 +68,19 @@ void questao03() {
 //e tiver mais de 21 anos.
 void questao04() {
 
-	char nome[50], sexo;
-	int idade, i;
+	char nome[50];
+	int idade, i, sexo;
 
-	for (i = 1; i <= 2; i++) {
+	for (i = 1; i <= 20; i++) {
 		printf("Informe o nome da pessoa %d: ", i);
 		scanf(" %50[^\n]", &nome);
 		printf("Informe a idade da pesso %d: ", i);
 		scanf(" %d", &idade);
-		printf("Informe o sexo da pessoa %d, m para masculino ou f para feminino: ", i);
-		scanf(" %c", &sexo);
-
-
-
+		printf("Informe o sexo da pessoa %d, 1 para masculino ou 2 para feminino: ", i);
+		scanf(" %d", &sexo);
+		if (idade >= 21 && sexo == 1) {
+			printf("\n\nO nome da pessoa %d é: %s.\n\n", i, nome);
+		}
 	}
 	
 }
@@ -88,7 +88,20 @@ void questao04() {
 //sucessivas, crie um programa que calcule o produto de dois números inteiros
 //lidos. Suponha que os números lidos sejam positivos.
 void questao05() {
-	printf("O email do professor é: preti.joao@ifmt.edu.br");
+	//printf("O email do professor é: preti.joao@ifmt.edu.br");
+
+	int num1, num2, produto = 0, i;
+
+	printf("Informe o primeiro número: ");
+	scanf("%d", &num1);
+	printf("Informe o segundo número: ");
+	scanf("%d", &num2);
+
+	for(i=1; i<=num1; i++) {
+		produto += num2;
+	}
+
+	printf("O produto de %d e %d é: %d.\n", num1, num2, produto);
 	
 }
 //6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
@@ -97,6 +110,15 @@ void questao05() {
 //• 1 + 1 = 2, terceiro termo;
 //• 1 + 2 = 3, quarto termo, etc.
 void questao06() {
+
+	printf("Os 20 primeiros termos da série de Fibronacci são:\n1\n");
+
+	int i;
+
+	for(i=1; i<=19; i++) {
+		//fazer baseando na questão anterior 
+		
+	}
 	
 }
 //7. Crie um programa que permita entrar com o nome, a nota da
